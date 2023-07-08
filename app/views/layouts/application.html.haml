@@ -1,0 +1,29 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title Todoapp
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    %header.header
+      .container
+        .header_wrap
+          .header_wrap_left
+            %h1.header_title Boards
+          - if user_signed_in?
+            .header_wrap_right
+              = image_tag 'Oval.svg', class: 'account'
+              .dropdown-content
+                %a{:href => '#'} プロフィール
+                = link_to 'ログアウト', destroy_user_session_path, data: { method: 'delete' }
+          - else
+            = link_to 'ログイン', new_user_session_path, class: 'header_loginBtn'
+    - if flash.present?
+      .flash
+        - flash.each do |key,value|
+          .key= value
+    = yield
