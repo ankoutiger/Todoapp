@@ -25,6 +25,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'annotate'
 gem 'faker'
 gem 'hamlit'
+gem 'devise'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
