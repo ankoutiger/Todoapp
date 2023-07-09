@@ -16,6 +16,9 @@ header {
   font-weight: 400;
   line-height: 1.8;
 }
+.header_title a {
+  color: #000000;
+}
 
 .header_loginBtn {
   background-color: #F8BD1C;
@@ -32,7 +35,28 @@ header {
 }
 
 .dropdown-content {
-  display: inline-block;
+  display: none;
+  font-weight: normal;
+  right: 0;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 8px 16px;
+  display: block;
+  color: #000000;
+}
+
+.dropdown-content a:hover {
+  background-color: white;
+}
+
+.header_wrap_right:hover .dropdown-content {
+  display: block;
 }
 
 .sign_title {
@@ -112,6 +136,91 @@ input[type=submit] {
     opacity: 0;
   }
 }
+.sign_title {
+  padding: 32px 0;
+}
+
+.sign_title {
+  padding: 32px 0;
+}
+
+.boards_card {
+  background: #F4F4F4;
+  width: 100%;
+  max-width: 362px;
+  height: auto;
+  padding: 32px 0;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.boards_card_wrap {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 17px 0;
+}
+.boards_card_desc {
+  margin: 0 17px 0;
+  width: 100%;
+  max-width: 17em;
+}
+.boards_card_icon {
+  display: block;
+  margin: 29px 17px 0;
+  width: 30px;
+  height: 30px;
+}
+
+.add_boards {
+  margin-top: 26px;
+  color: #000;
+  width: 100%;
+  max-width: 362px;
+  height: auto;
+  padding: 68px 0;
+  border-radius: 10px;
+  border: dashed 1px rgba(0, 0, 0, 0.2);
+  background: #fff;
+}
+.add_boards a {
+  color: #000;
+  text-align: center;
+  font-size: 18px;
+}
+
+.board_name {
+  display: block;
+  font-size: 18px;
+}
+
+.board_text {
+  display: block;
+  width: 100%;
+  height: 40px;
+  border: #f4f4f4;
+  border-radius: 10px;
+  background: #f4f4f4;
+  margin-bottom: 33px;
+}
+
+.board_desc {
+  display: block;
+  font-size: 18px;
+}
+
+.board_text_area {
+  display: block;
+  width: 100%;
+  height: 200px;
+  border: #f4f4f4;
+  border-radius: 10px;
+  background: #f4f4f4;
+  margin-bottom: 16px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 body {
   font-family: Avenir;
   font-size: 18px;
