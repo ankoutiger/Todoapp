@@ -5,7 +5,7 @@
 
     %h2.sign_title New Board
 
-    = form_with(model: @board, url: boards_path, method: 'post', local: true) do |f|
+    = form_with(model: @board, url: board_path, method: 'put', local: true) do |f|
         = f.label :title, 'Name' , class: 'board_name'
 
         = f.text_field :title, class: 'board_text'

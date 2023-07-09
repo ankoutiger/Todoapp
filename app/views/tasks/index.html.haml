@@ -1,1 +1,22 @@
-= @task
+.container
+    -# %h2.sign_title= @board.title
+    -# .boards
+    -#     - @boards.each do |board|
+    -#         = link_to tasks_path do
+    -#             .boards_card
+    -#                 .boards_card_wrap
+    -#                     .boards_title= board.title
+    -#                     - if user_signed_in? && current_user.has_written?(board)
+    -#                         .boards_card_actions
+    -#                             .dropdown
+    -#                                 =image_tag 'Combined Shape.svg', class: 'dropbtn'
+    -#                                 .dropdown-content
+    -#                                     = link_to '編集する', edit_board_path(board)
+    -#                                     = link_to '削除する', board_path(board), data: { method: 'delete', confirm: '本当に削除してもよろしですか？' } 
+    -#                 .boards_card_desc= board.content
+    -#                 =image_tag 'Oval2.svg', class: 'boards_card_icon'
+    -#     - if user_signed_in?
+    -#         .add_boards
+    -#             = link_to new_board_path do
+    -#                 .add_boards_new
+    -#                     %p.add_boards_title +Add new board

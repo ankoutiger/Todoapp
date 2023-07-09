@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
     def index
-        @task = 'デイトラ'
+        # @board = Board.find(params[:id])
     end
 end

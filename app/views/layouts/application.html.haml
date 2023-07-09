@@ -13,7 +13,7 @@
       .container
         .header_wrap
           .header_wrap_left
-            %h1.header_title Boards
+            %h1.header_title= link_to 'Boards', root_path
           - if user_signed_in?
             .header_wrap_right
               = image_tag 'Oval.svg', class: 'account'
