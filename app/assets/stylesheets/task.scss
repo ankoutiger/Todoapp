@@ -1,6 +1,6 @@
 @import './variables';
 
-.boards_card{
+.tasks_card{
     background: #F4F4F4;
     width: 100%;
     max-width: 362px;
@@ -29,7 +29,7 @@
     }
 }
 
-.add_boards{
+.add_tasks{
     margin-top: 26px;
     color: #000;
     width: 100%;
@@ -47,12 +47,20 @@
     }
 }
 
-.board_name{
+.task_name{
     display: block;
     font-size: 18px;
 }
 
-.board_text{
+.eyecatch{
+    font-size: 18px;
+
+    &_field{
+        margin: 5px 0 20px;
+    }
+}
+
+.task_text{
     display: block;
     width: 100%;
     height: 40px;
@@ -62,13 +70,13 @@
     margin-bottom: 33px;
 }
 
-.board_desc{
+.task_desc{
     display: block;
     font-size: 18px;
     color: #000;
 }
 
-.board_text_area{
+.task_text_area{
     display: block;
     width: 100%;
     height: 200px;
@@ -78,43 +86,99 @@
     margin-bottom: 16px;
 }
 
+
+
 .dropdown:hover .dropdown-content{
     display: block;
 }
 
-.boards_title{
+.tasks_title{
     font-weight: bold;
     margin-bottom: 8px;
     font-size: 22px;
     color: #000;
 }
 
-.login_text{
-    margin: 12px 0;
+.date{
     display: block;
-    text-align: center;
-    padding: 32px 0;
-    background-color: #F8BD1C;
-    height: 18px;
-    border-radius: 8px;
-    a{
-        font-size: 18px;
-        color: #fff;
+
+    &_due{
+        display: block;
     }
-    
 }
 
-.sign_up_text{
-    margin: 12px 0;
+.tasks_due{
     display: block;
-    text-align: center;
-    padding: 32px 0;
-    background-color: #15b600;
-    height: 18px;
+    width: 100%;
+    margin: 0 17px;
+}
+
+.tasks_due_title{
+    display: block;
+    width: 100%;
+    margin: 15px 17px 0;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.task_img{
+    width: 90%;
+    height: auto;
     border-radius: 8px;
-    a{
-        font-size: 18px;
-        color: #fff;
+    background: lightgray 50%/cover no-repeat;
+    margin: auto;
+    margin-bottom: 20px;
+
+    img{
+        object-fit: cover;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        max-height: 200px;
+        border-radius: 8px;
     }
+}
+
+.show_task_desc{
+    margin: 35px 0;
+    padding: 20px 15px;
+    border-radius: 10px;
+    background: #F4F4F4;
+}
+
+.comment_title{
+    font-size: 26px;
+    font-weight: 400;
+    line-height: nomal;
+    color: #000;
+}
+
+.card_img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    background: lightgray 50%/cover no-repeat;
+    margin: auto;
     
+    img{
+        object-fit: cover;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        max-height: 200px;
+        border-radius: 8px;
+        
+    }
+}
+
+.card_wrap{
+    display: flex;
+    justify-content: space-between;
+    // margin: 0 17px 0;
+}
+
+.card_dropbtn{
+    display: block;
+    padding: 46px 0;
+    // line-height: 2.5;
 }

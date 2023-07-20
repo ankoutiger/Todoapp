@@ -86,3 +86,31 @@
   font-size: 22px;
   color: #000;
 }
+
+.login_text {
+  margin: 12px 0;
+  display: block;
+  text-align: center;
+  padding: 32px 0;
+  background-color: #F8BD1C;
+  height: 18px;
+  border-radius: 8px;
+}
+.login_text a {
+  font-size: 18px;
+  color: #fff;
+}
+
+.sign_up_text {
+  margin: 12px 0;
+  display: block;
+  text-align: center;
+  padding: 32px 0;
+  background-color: #15b600;
+  height: 18px;
+  border-radius: 8px;
+}
+.sign_up_text a {
+  font-size: 18px;
+  color: #fff;
+}
