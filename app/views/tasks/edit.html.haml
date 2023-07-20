@@ -1,11 +1,15 @@
 .container
     %ul
-        - @board.errors.full_messages.each do |message|
+        - @task.errors.full_messages.each do |message|
             %li= message
+    
+    %h2.sign_title Card Repair
 
-    %h2.sign_title New Board
-
-    = form_with(model: @board, url: boards_path, method: 'post', local: true) do |f|
+    = form_with(model: @task, url: board_task_path, method: 'put', local: true) do |f|
+        %div
+            = f.label :eyecatch, 'Eyecatch' , class: 'eyecatch'
+        %div
+            = f.file_field :eyecatch, class: 'eyecatch_field'
         %div
             = f.label :title, 'Name' , class: 'board_name'
         %div

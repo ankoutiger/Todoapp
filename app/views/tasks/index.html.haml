@@ -1,22 +1,23 @@
 .container
-    -# %h2.sign_title= @board.title
-    -# .boards
-    -#     - @boards.each do |board|
-    -#         = link_to tasks_path do
-    -#             .boards_card
-    -#                 .boards_card_wrap
-    -#                     .boards_title= board.title
-    -#                     - if user_signed_in? && current_user.has_written?(board)
-    -#                         .boards_card_actions
-    -#                             .dropdown
-    -#                                 =image_tag 'Combined Shape.svg', class: 'dropbtn'
-    -#                                 .dropdown-content
-    -#                                     = link_to '編集する', edit_board_path(board)
-    -#                                     = link_to '削除する', board_path(board), data: { method: 'delete', confirm: '本当に削除してもよろしですか？' } 
-    -#                 .boards_card_desc= board.content
-    -#                 =image_tag 'Oval2.svg', class: 'boards_card_icon'
-    -#     - if user_signed_in?
-    -#         .add_boards
-    -#             = link_to new_board_path do
-    -#                 .add_boards_new
-    -#                     %p.add_boards_title +Add new board
+    .tasks
+        - @tasks.each do |task|
+            = link_to board_tasks_path do
+                .tasks_card
+                    .tasks_card_wrap
+                        .tasks_title= task.title
+                        - if user_signed_in? && current_user.has_added?(task)
+                            .tasks_card_actions
+                                .dropdown
+                                    =image_tag 'Combined Shape.svg', class: 'dropbtn'
+                                    .dropdown-content
+                                        -# = link_to '編集する', edit_board_task_path(task)
+                                        -# = link_to '削除する', board_task_path(task), data: { method: 'delete', confirm: '本当に削除してもよろしですか？' } 
+                    .tasks_card_desc= task.content
+                    %p.tasks_due_title 期限
+                    .tasks_due= task.date
+                    =image_tag 'Oval2.svg', class: 'tasks_card_icon'
+        - if user_signed_in?
+            .add_tasks
+                = link_to new_board_task_path do
+                    .add_tasks_new
+                        %p.add_tasks_title +Add new card

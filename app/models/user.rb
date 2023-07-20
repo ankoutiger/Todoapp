@@ -11,6 +11,10 @@ class User < ApplicationRecord
     boards.exists?(id: board.id)
   end
 
+  def has_added?(task)
+    tasks.exists?(id: task.id)
+  end
+
   def display_icon
   end
 end
