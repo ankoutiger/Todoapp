@@ -167,7 +167,6 @@
         height: auto;
         max-height: 200px;
         border-radius: 8px;
-        
     }
 }
 
@@ -185,4 +184,19 @@
         cursor: pointer;
     }
     // line-height: 2.5;
+}
+
+.task_comments_show{
+    display: flex;
+    justify-content: space-between;
+}
+
+.comment_icon{
+    display: flex;
+    margin: 29px 0 0;
+    img{
+        width: 30px;
+        height: 30px;
+        padding-left: 5px;
+    }
 }
