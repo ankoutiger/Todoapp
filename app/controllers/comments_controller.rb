@@ -8,13 +8,11 @@ class CommentsController<ApplicationController
     end
 
     def create
-        # board = Board.find(params[:board_id])
-        # @task = board.tasks.find(params[:id])
         task = Task.find(params[:task_id])
         @comment = task.comments.build(comments_params)
         @comment.user_id = current_user.id
         if @comment.save
-            redirect_to root_path, notice: 'コメントを追加しました！'
+            redirect_to board_path(task.board_id), notice: 'コメントを追加しました！'
         else
             flash.now[:error] = '更新できませんでした.'
             render :new
@@ -23,6 +21,6 @@ class CommentsController<ApplicationController
 
     private
     def comments_params
-        params.require(:comment).permit(:content)
+        params.require(:comment).permit(:content,:avatar)
     end
 end

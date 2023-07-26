@@ -1,0 +1,28 @@
+.container
+    %ul
+        - @profile.errors.full_messages.each do |message|
+            %li= message
+    
+    = form_with(model: @profile, url: profile_path , method: 'put' , local: true) do |f|
+        %div
+            = f.label :avatar, 'アバター'
+        %div
+            = f.file_field :avatar, class: 'avatar'
+        %div
+            = f.label :nickname, 'ハンドルネーム'
+        %div
+            = f.text_field :nickname, class: 'board_text'
+        %div
+            = f.label :introduction, '自己紹介'
+        %div
+            = f.text_area :introduction ,class: 'board_text_area'
+        %div
+            = f.label :gender, '性別'
+        %div
+            = f.select :gender, Profile.genders.map{ |k,v| [I18n.t("enum.genders.#{k}"), k ] } , {}, { class: 'board_text'}
+        %div
+            = f.label :birthday ,'生年月日'
+        %div
+            = f.date_field :birthday, class: 'board_text'
+        %div
+            = f.submit 'submit', class: 'btn'
