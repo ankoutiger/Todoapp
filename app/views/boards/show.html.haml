@@ -18,7 +18,11 @@
                     .tasks_card_desc= task.content
                     %p.tasks_due_title 期限
                     .tasks_due= task.date
-                    =image_tag task.user.display_icon, class: 'tasks_card_icon'
+                    .task_comments_show
+                        =image_tag task.user.display_icon, class: 'tasks_card_icon'
+                        .comment_icon
+                            %span= task.comment_count
+                            =image_tag 'comment-regular.svg'
         - if user_signed_in?
             .add_tasks
                 = link_to new_board_task_path(@board) do
