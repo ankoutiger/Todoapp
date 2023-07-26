@@ -20,7 +20,9 @@
     - if user_signed_in?
         -if @comments.exists?
             - @comments.each do |comment|
-                .comments_show= comment.content
+                .comment_wrap
+                    .comment_icon= image_tag comment.user.display_icon
+                    .comments_show= comment.content
         .add_comment
             = link_to new_board_task_comment_path(task_id: @task) do
                 .add_boards_new

@@ -172,4 +172,5 @@
 .card_dropbtn {
   display: block;
   padding: 46px 0;
+  z-index: 100;
 }

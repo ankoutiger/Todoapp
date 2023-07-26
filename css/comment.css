@@ -18,3 +18,22 @@
   height: auto;
   margin-bottom: 20px;
 }
+
+.comment_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment_icon {
+  width: 20%;
+}
+.comment_icon img {
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+}
+
+.comments_show {
+  width: 80%;
+  max-width: 17em;
+}

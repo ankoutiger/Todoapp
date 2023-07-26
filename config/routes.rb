@@ -8,4 +8,6 @@ Rails.application.routes.draw do
       resources :comments
     end
   end
+
+  resource :profile, only: [:show, :edit, :update]
 end
