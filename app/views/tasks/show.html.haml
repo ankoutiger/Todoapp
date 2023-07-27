@@ -21,7 +21,7 @@
         -if @comments.exists?
             - @comments.each do |comment|
                 .comment_wrap
-                    .comment_icon= image_tag comment.user.display_icon
+                    .comment_icon_show= image_tag comment.user.display_icon
                     .comments_show= comment.content
         .add_comment
             = link_to new_board_task_comment_path(task_id: @task) do
