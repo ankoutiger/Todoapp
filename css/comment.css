@@ -24,10 +24,10 @@
   justify-content: space-between;
 }
 
-.comment_icon {
+.comment_icon_show {
   width: 20%;
 }
-.comment_icon img {
+.comment_icon_show img {
   width: 30px;
   height: 30px;
   border-radius: 20px;
