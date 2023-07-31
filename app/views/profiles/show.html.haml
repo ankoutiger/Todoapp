@@ -9,7 +9,7 @@
                 .profilePage_user_actionButton
                     = link_to '編集する', edit_profile_path
             .profilePage_user_introdution
-                = current_user.profile.introduction
+                = current_user.profile&.introduction
     - current_user.boards.each do |board|
         = link_to board_path(board) do
             .boards_card
