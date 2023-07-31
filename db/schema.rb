@@ -72,7 +72,6 @@ ActiveRecord::Schema.define(version: 2023_07_23_212845) do
     t.string "title", null: false
     t.text "content", null: false
     t.date "date", null: false
-    t.string "eyecatch"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["board_id"], name: "index_tasks_on_board_id"
